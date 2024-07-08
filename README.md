@@ -7,7 +7,7 @@ This is a simple C# messaging project using RabbitMQ. It demonstrates how to cre
 - .NET Core SDK
 - RabbitMQ Server
 
-## Configuração
+## Configuration
 
 ### 1. Clone o Repositório
 
@@ -26,6 +26,9 @@ dotnet add Receive/Receive.csproj package RabbitMQ.Client
 Certifique-se de que você tenha o RabbitMQ Client instalado em ambos os projetos (Send e Receive).
 
 ```
+# latest RabbitMQ 3.13
+docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management
+
 dotnet add Send/Send.csproj package RabbitMQ.Client
 dotnet add Receive/Receive.csproj package RabbitMQ.Client
 
